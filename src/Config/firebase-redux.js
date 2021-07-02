@@ -1,6 +1,7 @@
 import { combineReducers, createStore } from "redux";
 import { firebaseReducer } from "react-redux-firebase";
 import firebase from 'firebase'
+import 'firebase/firestore'
 
 const rootReducer = combineReducers({
     firebase: firebaseReducer

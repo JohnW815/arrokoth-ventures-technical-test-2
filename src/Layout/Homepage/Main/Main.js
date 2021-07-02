@@ -1,5 +1,6 @@
 import React from 'react';
-import ViewQuestionnaire from '../Pages/ViewQuestionnaire/ViewQuestionnaire'
+
+import ViewQuestionnaire from '../../ViewQuestionnaire/ViewQuestionnaire'
 
 const Main = (props) => {
     return (
