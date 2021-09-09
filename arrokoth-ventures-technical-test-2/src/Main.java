@@ -15,49 +15,49 @@ public class Main {
         inputValue = inputObj.nextLine();
 
         for(int i = 0; i < inputValue.length(); i++){
+
+            if(charactersList.size() == 0){
+                if(inputValue.charAt(i) == ')' || inputValue.charAt(i) == ']' || inputValue.charAt(i) == '}'){
+                    isValid = false;
+                    break;
+                }
+            }
+
             if(inputValue.charAt(i) == '(' || inputValue.charAt(i) == '[' || inputValue.charAt(i) == '{'){
                 charactersList.add(inputValue.charAt(i));
-                isValid = false;
             }
 
             if(charactersList.size() > 0){
 
+                isValid = false;
+
                 if(charactersList.get(charactersList.size() - 1) == '('){
                     if(inputValue.charAt(i) == ']' || inputValue.charAt(i) == '}'){
-                        isValid = false;
                         break;
                     }
                 }else if(charactersList.get(charactersList.size() - 1) == '['){
                     if(inputValue.charAt(i) == ')' || inputValue.charAt(i) == '}'){
-                        isValid = false;
                         break;
                     }
                 }else if(charactersList.get(charactersList.size() - 1) == '{'){
                     if(inputValue.charAt(i) == ')' || inputValue.charAt(i) == ']'){
-                        isValid = false;
                         break;
                     }
                 }
 
                 if(charactersList.get(charactersList.size() - 1) == '(' && inputValue.charAt(i) == ')'){
                     charactersList.remove(charactersList.size() - 1);
+                    isValid = true;
                 }else if(charactersList.get(charactersList.size() - 1) == '[' && inputValue.charAt(i) == ']'){
                     charactersList.remove(charactersList.size() - 1);
+                    isValid = true;
                 }else if(charactersList.get(charactersList.size() - 1) == '{' && inputValue.charAt(i) == '}'){
                     charactersList.remove(charactersList.size() - 1);
-                }
-            }
-
-            if(charactersList.size() == 0){
-                if(inputValue.charAt(i) == ')' || inputValue.charAt(i) == ']' || inputValue.charAt(i) == '}'){
-                    isValid = false;
-                    break;
-                }else{
                     isValid = true;
                 }
             }
-        }
 
+        }
         System.out.println(isValid);
     }
 }
