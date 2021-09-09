@@ -70,10 +70,12 @@ function App() {
             <Header
                 fetchingData={fetchingData}
             />
-            {
-                isLoaded&&
+            <div className="h-auto min-h-screen bg-gray-700">
+                {
+                    isLoaded&&
                     <RouterManagement />
-            }
+                }
+            </div>
         </Router>
     </div>
   );

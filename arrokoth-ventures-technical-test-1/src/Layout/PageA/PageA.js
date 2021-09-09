@@ -34,7 +34,7 @@ const PageA = (props) => {
     console.log(ADAList);
 
     return(
-        <div className="w-full">
+        <div className="w-full text-white">
             <table className="table-auto">
                 <thead>
                     <tr>

@@ -35,10 +35,10 @@ const PageB = (props) => {
     console.log(ADAList);
     
     return(
-        <div className="w-full">
-            <table className="table-auto">
+        <div className="w-full text-white">
+            <table className="w-full table-auto">
                 <thead>
-                    <tr>
+                    <tr className="border-b">
                         <th className="w-1/6">Asset/Contract name</th>
                         <th className="w-1/6">Bid</th>
                         <th className="w-1/6">Ask</th>
